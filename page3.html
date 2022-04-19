@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./modals.css" />
+    <link rel="stylesheet" href="./helpfinder.css" />
+    <link rel="stylesheet" href="./notifications.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <title>Dashboard - Help Finder</title>
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" />
+
+    <!-- sidebar -->
+
+    <div class="sidebar">
+      <!-- sidebar logo -->
+
+      <div class="sidebar__logo">
+        <a href="./">
+          <img src="./images/gw-large.png" alt="" class="sidebar-logo-logo" />
+        </a>
+        <a href="./">
+          <img src="./images/gw-small.png" alt="" class="sidebar-small-logo" />
+        </a>
+      </div>
+
+      <!-- sidebar__menu -->
+
+      <div class="sidebar__menu">
+        <ul>
+          <li>
+            <a href="./index.html">
+              <span class="las la-home"></span><span> Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="./appointments.html" class="sidebar__menu-active">
+              <span class="las la-calendar-day"></span
+              ><span> Appointments</span>
+            </a>
+          </li>
+          <li>
+            <a href="./podcasts.html">
+              <span class="las la-podcast"></span><span> Podcasts</span>
+            </a>
+          </li>
+          <li>
+            <a href="./articles.html">
+              <span class="las la-newspaper"></span><span> Articles</span>
+            </a>
+          </li>
+          <li>
+            <a href="./videos.html">
+              <span class="lab la-youtube"></span><span> Videos</span>
+            </a>
+          </li>
+          <li>
+            <a href="./settings.html">
+              <span class="las la-cog"></span><span> Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" id="logoutModalTrigger">
+              <span class="las la-sign-out-alt"></span><span> Logout</span>
+            </a>
+          </li>
+          <!-- The Modal -->
+          <div id="logoutModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close las la-times"></span>
+              <br />
+              <h1 class="card-title modal__title">
+                Are you sure you want to logout?
+              </h1>
+              <div class="modal__button-container">
+                <button>Cancel</button>
+                <button>Logout</button>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <!-- main content -->
+
+    <div class="main__content">
+      <header>
+        <div class="header__left-side">
+          <label for="nav-toggle">
+            <span class="las la-bars"></span>
+          </label>
+        </div>
+
+        <div class="header__right-side">
+          <a href="./crisislink1.html" class="header__crisis-button"
+            >Get Help Now</a
+          >
+          <div class="header__notifications">
+            <ul class="notification-drop">
+              <li class="item">
+                <i
+                  class="fa fa-bell-o notification-bell"
+                  aria-hidden="true"
+                ></i>
+                <span class="btn__badge pulse-button">3</span>
+                <ul>
+                  <li>First Item</li>
+                  <li>Second Item</li>
+                  <li>Third Item</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <img
+            src="./images/orfilepic.png"
+            alt="ben-profile-picture"
+            width="40"
+            height="40"
+          />
+          <div>
+            <h4>Adam Greene</h4>
+            <small>user account</small>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div>
+          <a
+            href="./page2.html"
+            class="link-text booknow__go-back-link"
+            style="color: #41496b !important"
+          >
+            Go back</a
+          >
+        </div>
+
+        <div class="emoji__wrapper">
+          <div class="welcome__container">
+            <h1 class="title-text emoji__title">
+              Where are you currently located?
+            </h1>
+          </div>
+
+          <div class="booknow__page-3">
+            <input type="text" placeholder="Type in your zip code here" />
+            <a href="./page4.html" class="link-text zipcode__link">Continue </a>
+          </div>
+          <div class="welcome__container">
+            <p class="helpfinder__footer-text">
+              Please note that appointments are subject to availability. If you
+              have a crisis and are not able to schedule immediate help, please
+              refer to our
+              <span style="color: #00ae4e; cursor: pointer"
+                >Crisis Support Page.</span
+              >
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./modals.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".notification-drop .item").on("click", function () {
+          $(this).find("ul").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+.home__title {
+  margin-bottom: 0.5rem;
+}
+
+.home__featured-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #41496b;
+  margin-bottom: 3rem;
+}
+
+.home__grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.home__card {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.home__card-img-wrapper {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.home__card-img {
+  height: auto;
+  width: 100%;
+  position: relative;
+  top: 5px;
+}
+
+.home__card-title {
+  color: #41496b;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.home__card-subtitle {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #8390a2;
+  margin-top: 0.5rem;
+}
+
+.home__card-button {
+  margin-right: 5px;
+  font-size: 0.6rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 400;
+  background-color: #00ae4e;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+
+.home__card-button-pink {
+  margin-right: 5px;
+  font-size: 0.6rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 400;
+  background-color: #eb1c74;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+
+.home__card-button-orange {
+  margin-right: 5px;
+  font-size: 0.6rem;
+  color: #fff !important;
+  cursor: pointer;
+  font-weight: 400;
+  background-color: #0f0e9f !important;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+
+.home__card-header {
+  font-size: 0.6rem;
+  color: #8390a2;
+  display: inline-block;
+  margin-bottom: 1rem;
+  background-color: #8390a21a;
+  border-radius: 5px;
+  padding: 0.2rem;
+  align-self: center;
+}
+
+.home__table-link {
+  font-size: 0.6rem;
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #00ae4e;
+  border-radius: 5px;
+  padding: 0.2rem;
+  align-self: center;
+}
+
+.home__card-header-orange {
+  font-size: 0.6rem;
+  color: #0f0e9f;
+  display: inline-block;
+  margin-bottom: 1rem;
+  background-color: #0f0e9f31;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+
+.home__card-header-pink {
+  font-size: 0.6rem;
+  color: #eb1c74;
+  display: inline-block;
+  margin-bottom: 1rem;
+  background-color: #eb1c742c;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+.home__card-one-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.home__icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #41496b;
+}
+
+@media only screen and (max-width: 960px) {
+  .home__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 560px) {
+}

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./modals.css" />
+    <link rel="stylesheet" href="./podcasts.css" />
+    <link rel="stylesheet" href="./podcast-player.css">
+    <link rel="stylesheet" href="./notifications.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <title>Dashboard - Podcasts</title>
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" />
+
+    <!-- sidebar -->
+
+    <div class="sidebar">
+      <!-- sidebar logo -->
+
+      <div class="sidebar__logo">
+        <a href="./">
+          <img src="./images/gw-large.png" alt="" class="sidebar-logo-logo" />
+        </a>
+        <a href="./">
+          <img src="./images/gw-small.png" alt="" class="sidebar-small-logo" />
+        </a>
+      </div>
+
+      <!-- sidebar__menu -->
+
+      <div class="sidebar__menu">
+        <ul>
+          <li>
+            <a href="./index.html">
+              <span class="las la-home"></span><span> Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="./appointments.html">
+              <span class="las la-calendar-day"></span
+              ><span> Appointments</span>
+            </a>
+          </li>
+          <li>
+            <a href="./podcasts.html" class="sidebar__menu-active">
+              <span class="las la-podcast"></span><span> Podcasts</span>
+            </a>
+          </li>
+          <li>
+            <a href="./articles.html">
+              <span class="las la-newspaper"></span><span> Articles</span>
+            </a>
+          </li>
+          <li>
+            <a href="./videos.html">
+              <span class="lab la-youtube"></span><span> Videos</span>
+            </a>
+          </li>
+          <li>
+            <a href="./settings.html">
+              <span class="las la-cog"></span><span> Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" id="logoutModalTrigger">
+              <span class="las la-sign-out-alt"></span><span> Logout</span>
+            </a>
+          </li>
+          <!-- The Modal -->
+          <div id="logoutModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close las la-times"></span>
+              <br />
+              <h1 class="card-title modal__title">
+                Are you sure you want to logout?
+              </h1>
+              <div class="modal__button-container">
+                <button>Cancel</button>
+                <button>Logout</button>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <!-- main content -->
+
+    <div class="main__content">
+      <header>
+        <div class="header__left-side">
+          <label for="nav-toggle">
+            <span class="las la-bars"></span>
+          </label>
+        </div>
+
+        <div class="header__right-side">
+          <a href="./crisislink1.html" class="header__crisis-button">Get Help Now</a>
+          <div class="header__notifications">
+            <ul class="notification-drop">
+              <li class="item">
+                <i
+                  class="fa fa-bell-o notification-bell"
+                  aria-hidden="true"
+                ></i>
+                <span class="btn__badge pulse-button">3</span>
+                <ul>
+                  <li>First Item</li>
+                  <li>Second Item</li>
+                  <li>Third Item</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <img
+            src="./images/orfilepic.png"
+            alt="ben-profile-picture"
+            width="40"
+            height="40"
+          />
+          <div>
+            <h4>Adam Greene</h4>
+            <small>user account</small>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="welcome__container">
+          <h1 class="title-text podcast__title">Podcasts</h1>
+          <p class="small-text podcasts__subtitle">
+            Podcasts covering all types of mental health topics.
+          </p>
+        </div>
+
+        <div class="podcasts__grid">
+          <div>
+            <p class="podcasts__featured-subtitle">Featured Podcast</p>
+            <div class="podcasts__featured-grid">
+              <div class="img-container">
+                <img id="song-cover" src="./img/podcast-1.jpg" alt="Album Art">
+              </div>
+              <div class="player-container">
+                <div class="player__uploader-info">
+                  <h2 id="title" class="player__title"></h2>
+                  <h3 id="artist" class="player__artist">You matter, here's why
+  
+  </h3>
+
+                </div>
+                <div>
+
+                  <audio src="./music/jacinto-1.mp3"></audio>
+                  <div class="duration-wrapper" >
+                    <p id="current-time" class="player__song-time">0:00</p>
+                    <p id="duration" class="player__song-time">30:48</p>
+                  </div>
+                  <div class="progress-container" id="progress-container">
+                    <div class="progress" id="progress"></div>
+                  </div>
+                  <div class="player-controls">
+                    <i class="fas fa-backward" id="prev" title="Previous"></i>
+                    <i class="fas fa-play main-button" id="play" title="Play"></i>
+                    <i class="fas fa-forward" id="next" title="Next"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="search__wrapper">
+              <p class="podcasts__featured-subtitle">All Podcasts</p>
+              <div class="search__box">
+                <i class="las la-search"></i>
+                <input class="search__input" type="text" placeholder="search podcasts...">
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table width="100%">
+                <thead>
+                  <tr>
+                    <td>Recently Added</td>
+                    <td class="podcast__table-right-header"><a href="">View All</a></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="podcast__details-container">
+                        <div class="podcast__details-left-side">
+                          <div class="podcast__details-cover-wrapper">
+                            <img
+                              class="podcast__details-cover"
+                              src="./images/video_one.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="podcast__details-right-side">
+                          <p class="podcast__details-title">
+                            You matter, here's why
+                          </p>
+                          <p class="podcast__details-uploader">Dr. Edwards</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="podcast__table-second-td">
+                      <div class="podcast__table-right-side">
+                        <span class="podcast__length">30:48</span>
+                        <span
+                          class="fas fa-play podcast__table-play-buttons-icon"
+                        ></span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="podcast__details-container">
+                        <div class="podcast__details-left-side">
+                          <div class="podcast__details-cover-wrapper">
+                            <img
+                              class="podcast__details-cover"
+                              src="./images/video_two.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="podcast__details-right-side">
+                          <p class="podcast__details-title">
+                            Overcome the awkwardness
+                          </p>
+                          <p class="podcast__details-uploader">Dr. Edwards</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="podcast__table-second-td">
+                      <div class="podcast__table-right-side">
+                        <span class="podcast__length">49:41</span>
+                        <span
+                          class="fas fa-play podcast__table-play-buttons-icon"
+                        ></span>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="podcast__details-container">
+                        <div class="podcast__details-left-side">
+                          <div class="podcast__details-cover-wrapper">
+                            <img
+                              class="podcast__details-cover"
+                              src="./images/video_three.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="podcast__details-right-side">
+                          <p class="podcast__details-title">
+                            What to do when you feel alone
+                          </p>
+                          <p class="podcast__details-uploader">Dr. Edwards</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="podcast__table-second-td">
+                      <div class="podcast__table-right-side">
+                        <span class="podcast__length">24:45</span>
+                        <span
+                          class="fas fa-play podcast__table-play-buttons-icon"
+                        ></span>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="podcast__details-container">
+                        <div class="podcast__details-left-side">
+                          <div class="podcast__details-cover-wrapper">
+                            <img
+                              class="podcast__details-cover"
+                              src="./images/video_four.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="podcast__details-right-side">
+                          <p class="podcast__details-title">
+                            You don't have to be perfect
+                          </p>
+                          <p class="podcast__details-uploader">Ms. Allen</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="podcast__table-second-td">
+                      <div class="podcast__table-right-side">
+                        <span class="podcast__length">29:13</span>
+                        <span
+                          class="fas fa-play podcast__table-play-buttons-icon"
+                        ></span>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="podcast__details-container">
+                        <div class="podcast__details-left-side">
+                          <div class="podcast__details-cover-wrapper">
+                            <img
+                              class="podcast__details-cover"
+                              src="./images/video_five.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="podcast__details-right-side">
+                          <p class="podcast__details-title">
+                            5 steps to overcome addiction
+                          </p>
+                          <p class="podcast__details-uploader">Ms. Allen</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="podcast__table-second-td">
+                      <div class="podcast__table-right-side">
+                        <span class="podcast__length">45:34</span>
+                        <span
+                          class="fas fa-play podcast__table-play-buttons-icon"
+                        ></span>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="podcast__details-container">
+                        <div class="podcast__details-left-side">
+                          <div class="podcast__details-cover-wrapper">
+                            <img
+                              class="podcast__details-cover"
+                              src="./images/video_six.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="podcast__details-right-side">
+                          <p class="podcast__details-title">
+                            Flags that a friend needs help
+                          </p>
+                          <p class="podcast__details-uploader">Dr. Coleman</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="podcast__table-second-td">
+                      <div class="podcast__table-right-side">
+                        <span class="podcast__length">25:12</span>
+                        <span
+                          class="fas fa-play podcast__table-play-buttons-icon"
+                        ></span>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="podcast__details-container">
+                        <div class="podcast__details-left-side">
+                          <div class="podcast__details-cover-wrapper">
+                            <img
+                              class="podcast__details-cover"
+                              src="./images/video_seven.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="podcast__details-right-side">
+                          <p class="podcast__details-title">
+                            Not everyone is your friend
+                          </p>
+                          <p class="podcast__details-uploader">Dr. Edwards</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="podcast__table-second-td">
+                      <div class="podcast__table-right-side">
+                        <span class="podcast__length">37:45</span>
+                        <span
+                          class="fas fa-play podcast__table-play-buttons-icon"
+                        ></span>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="podcast__details-container">
+                        <div class="podcast__details-left-side">
+                          <div class="podcast__details-cover-wrapper">
+                            <img
+                              class="podcast__details-cover"
+                              src="./images/video_eight.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="podcast__details-right-side">
+                          <p class="podcast__details-title">
+                            You matter, here's why
+                          </p>
+                          <p class="podcast__details-uploader">Ms. Allen</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="podcast__table-second-td">
+                      <div class="podcast__table-right-side">
+                        <span class="podcast__length">49:21</span>
+                        <span
+                          class="fas fa-play podcast__table-play-buttons-icon"
+                        ></span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./modals.js"></script>
+    <script src="./podcast-player.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".notification-drop .item").on("click", function () {
+          $(this).find("ul").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

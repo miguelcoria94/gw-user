@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./modals.css" />
+    <link rel="stylesheet" href="./homepage.css" />
+    <link rel="stylesheet" href="./notifications.css" />
+    <link rel="stylesheet" href="./appointments.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <title>Dashboard - Account Overview</title>
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" />
+
+    <!-- sidebar -->
+
+    <div class="sidebar">
+      <!-- sidebar logo -->
+
+      <div class="sidebar__logo">
+        <a href="./">
+          <img src="./images/gw-large.png" alt="" class="sidebar-logo-logo" />
+        </a>
+        <a href="./">
+          <img src="./images/gw-small.png" alt="" class="sidebar-small-logo" />
+        </a>
+      </div>
+
+      <!-- sidebar__menu -->
+      <div class="sidebar__menu">
+        <ul>
+          <li>
+            <a href="./index.html" class="sidebar__menu-active">
+              <span class="las la-home"></span><span> Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="./appointments.html">
+              <span class="las la-calendar-day"></span
+              ><span> Appointments</span>
+            </a>
+          </li>
+          <li>
+            <a href="./podcasts.html">
+              <span class="las la-podcast"></span><span> Podcasts</span>
+            </a>
+          </li>
+          <li>
+            <a href="./articles.html">
+              <span class="las la-newspaper"></span><span> Articles</span>
+            </a>
+          </li>
+          <li>
+            <a href="./videos.html">
+              <span class="lab la-youtube"></span><span> Videos</span>
+            </a>
+          </li>
+          <li>
+            <a href="./settings.html">
+              <span class="las la-cog"></span><span> Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" id="logoutModalTrigger">
+              <span class="las la-sign-out-alt"></span><span> Logout</span>
+            </a>
+          </li>
+          <!-- The Modal -->
+          <div id="logoutModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close las la-times"></span>
+              <br />
+              <h1 class="card-title modal__title">
+                Are you sure you want to logout?
+              </h1>
+              <div class="modal__button-container">
+                <button>Cancel</button>
+                <button>Logout</button>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <!-- main content -->
+
+    <div class="main__content">
+      <header>
+        <div class="header__left-side">
+          <label for="nav-toggle">
+            <span class="las la-bars"></span>
+          </label>
+        </div>
+
+        <div class="header__right-side">
+          <a href="./crisislink1.html" class="header__crisis-button"
+            >Get Help Now</a
+          >
+          <div class="header__notifications">
+            <ul class="notification-drop">
+              <li class="item">
+                <i
+                  class="fa fa-bell-o notification-bell"
+                  aria-hidden="true"
+                ></i>
+                <span class="btn__badge pulse-button">3</span>
+                <ul>
+                  <li>First Item</li>
+                  <li>Second Item</li>
+                  <li>Third Item</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <img
+            src="./images/orfilepic.png"
+            alt="ben-profile-picture"
+            width="40"
+            height="40"
+          />
+          <div>
+            <h4>Adam Greene</h4>
+            <small>user account</small>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="welcome__container">
+          <h1 class="title-text home__title">Home</h1>
+          <p class="small-text">Here's your account at a glance.</p>
+        </div>
+
+        <div class="home__grid">
+          <div class="home__card">
+            <div class="home__card-one-content">
+              <div class="home__card-img-wrapper">
+                <img src="./images/allen.jpg" alt="" class="home__card-img">
+              </div>
+              <div>
+                <div>
+                  <span class="home__card-title">Ms.Allen</span>
+                  <span class="home__card-subtitle home__card-date"
+                    ><span class="las la-calendar"></span> July 28, 2021</span
+                  >
+                  <span class="home__card-subtitle"
+                    >
+                </div>
+              </div>
+            </div>
+            <a href="./appointments.html" class="home__card-button">Next Appointment</a>
+            <br>
+            <a class="home__card-button-pink"><i class="las la-times"></i> Cancel</a>
+          </div>
+          <div class="home__card">
+            <div class="home__card-one-content">
+              <i class="las la-calendar-day home__icon"></i>
+              <div>
+                <span class="home__card-title">Need someone to talk to?</span>
+              </div>
+            </div>
+            <a href="./appointments.html" class="home__card-button">Book Now</a>
+          </div>
+          <div class="home__card">
+            <div class="home__card-one-content">
+              <i class="las la-podcast home__icon"></i>
+              <div>
+                <span class="home__card-title">
+                  Latest podcast episode</span
+                >
+              </div>
+            </div>
+            <a href="./podcasts.html" class="home__card-button-orange"
+              >Listen Now</a
+            >
+          </div>
+          <div class="home__card">
+            <div class="home__card-one-content">
+              <i class="las la-newspaper home__icon"></i>
+              <div>
+                <span class="home__card-title">
+                 Latest NormanAid News</span
+                >
+              </div>
+            </div>
+            <a href="./articles.html" class="home__card-button-pink">Read Now</a>
+          </div>
+        </div>
+        <div>
+          <div class="table-responsive">
+              <table width="100%">
+                <thead>
+                  <tr>
+                    <td>Recent Appointments</td>
+                    <td class="appointment__table-right-header"><a href="">View All</a></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="appointment__details-container">
+                        <div class="appointment__details-left-side">
+                          <span class="appointment__details-count">01</span>
+                          <div class="appointment__details-cover-wrapper">
+                            <img
+                              class="appointment__details-cover"
+                              src="./images/allen.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="appointment__details-right-side">
+                          <p class="appointment__details-title">
+                            Q&A session
+                          </p>
+                          <div>
+                            <div>
+
+                              <span class="appointment__details-uploader"><span class="las la-user"></span> Ms.Allen</span>
+                              <span class="appointment__details-date"><span class="las la-calendar"></span> July 18, 2021</span>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="appointment__table-second-td">
+                      <div class="appointment__table-right-side">
+                        <span ><a class="home__table-link" href="./rebook1.html">Rebook Now</a></span>
+                        <span
+                          class="fas fa-clock appointment__table-play-buttons-icon"
+                        ></span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="appointment__details-container">
+                        <div class="appointment__details-left-side">
+                          <span class="appointment__details-count">02</span>
+                          <div class="appointment__details-cover-wrapper">
+                            <img
+                              class="appointment__details-cover"
+                              src="./images/edwards.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="appointment__details-right-side">
+                          <p class="appointment__details-title">
+                            Monthly check-in
+                          </p>
+                          <div>
+                            <div>
+                              <span class="appointment__details-uploader"><span class="las la-user"></span> Dr. Edwards</span>
+                              <span class="appointment__details-date"><span class="las la-calendar"></span> July 14, 2021</span>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="appointment__table-second-td">
+                      <div class="appointment__table-right-side">
+                        <span ><a class="home__table-link" href="./rebook1.html">Rebook Now</a></span>
+                        <span
+                          class="fas fa-undo-alt appointment__table-play-buttons-icon"
+                        ></span>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="appointment__details-container">
+                        <div class="appointment__details-left-side">
+                          <span class="appointment__details-count">03</span>
+                          <div class="appointment__details-cover-wrapper">
+                            <img
+                              class="appointment__details-cover"
+                              src="./images/allen.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="appointment__details-right-side">
+                          <p class="appointment__details-title">
+                            Therapy session
+                          </p>
+                          <div>
+                            <div>
+
+                              <span class="appointment__details-uploader"><span class="las la-user"></span> Ms. Allen</span>
+                              <span class="appointment__details-date"><span class="las la-calendar"></span> July 12, 2021</span>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="appointment__table-second-td">
+                      <div class="appointment__table-right-side">
+                        <span ><a class="home__table-link" href="./rebook1.html">Rebook Now</a></span>
+                        <span
+                          class="fas fa-undo-alt appointment__table-play-buttons-icon"
+                        ></span>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="appointment__details-container">
+                        <div class="appointment__details-left-side">
+                          <span class="appointment__details-count">04</span>
+                          <div class="appointment__details-cover-wrapper">
+                            <img
+                              class="appointment__details-cover"
+                              src="./images/allen.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="appointment__details-right-side">
+                          <p class="appointment__details-title">
+                            Therapy session
+                          </p>
+                          <div>
+                            <div>
+
+                              <span class="appointment__details-uploader"><span class="las la-user"></span> Ms.Allen</span>
+                              <span class="appointment__details-date"><span class="las la-calendar"></span> July 09, 2021</span>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="appointment__table-second-td">
+                      <div class="appointment__table-right-side">
+                        <span ><a class="home__table-link" href="./rebook1.html">Rebook Now</a></span>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="appointment__details-container">
+                        <div class="appointment__details-left-side">
+                          <span class="appointment__details-count">05</span>
+                          <div class="appointment__details-cover-wrapper">
+                            <img
+                              class="appointment__details-cover"
+                              src="./images/allen.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="appointment__details-right-side">
+                          <p class="appointment__details-title">
+                            Q&A session
+                          </p>
+                          <div>
+                            <div>
+
+                              <span class="appointment__details-uploader"><span class="las la-user"></span> Ms.Allen</span>
+                              <span class="appointment__details-date"><span class="las la-calendar"></span> July 07, 2021</span>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="appointment__table-second-td">
+                      <div class="appointment__table-right-side">
+                        <span ><a class="home__table-link" href="./rebook1.html">Rebook Now</a></span>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="appointment__details-container">
+                        <div class="appointment__details-left-side">
+                          <span class="appointment__details-count">06</span>
+                          <div class="appointment__details-cover-wrapper">
+                            <img
+                              class="appointment__details-cover"
+                              src="./images/coleman.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="appointment__details-right-side">
+                          <p class="appointment__details-title">
+                            Mental health check up
+                          </p>
+                          <div>
+                            <div>
+
+                              <span class="appointment__details-uploader"><span class="las la-user"></span> Dr. Coleman</span>
+                              <span class="appointment__details-date"><span class="las la-calendar"></span> July 04, 2021</span>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="appointment__table-second-td">
+                      <div class="appointment__table-right-side">
+                        <span ><a class="home__table-link" href="./rebook1.html">Rebook Now</a></span>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="appointment__details-container">
+                        <div class="appointment__details-left-side">
+                          <span class="appointment__details-count">07</span>
+                          <div class="appointment__details-cover-wrapper">
+                            <img
+                              class="appointment__details-cover"
+                              src="./images/edwards.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="appointment__details-right-side">
+                          <p class="appointment__details-title">
+                            Meet and greet
+                          </p>
+                          <div>
+                            <div>
+
+                              <span class="appointment__details-uploader"><span class="las la-user"></span> Ms. Edwards</span>
+                              <span class="appointment__details-date"><span class="las la-calendar"></span> June 27, 2021</span>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="appointment__table-second-td">
+                      <div class="appointment__table-right-side">
+                        <span ><a class="home__table-link" href="./rebook1.html">Rebook Now</a></span>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="appointment__details-container">
+                        <div class="appointment__details-left-side">
+                          <span class="appointment__details-count">08</span>
+                          <div class="appointment__details-cover-wrapper">
+                            <img
+                              class="appointment__details-cover"
+                              src="./images/allen.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="appointment__details-right-side">
+                          <p class="appointment__details-title">
+                            Consultation
+                          </p>
+                          <div>
+                            <div>
+
+                              <span class="appointment__details-uploader"><span class="las la-user"></span> Ms.Allen</span>
+                              <span class="appointment__details-date"><span class="las la-calendar"></span> June 24, 2021</span>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="appointment__table-second-td">
+                      <div class="appointment__table-right-side">
+                        <span ><a class="home__table-link" href="./rebook1.html">Rebook Now</a></span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+      </main>
+    </div>
+    <script src="./modals.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".notification-drop .item").on("click", function () {
+          $(this).find("ul").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

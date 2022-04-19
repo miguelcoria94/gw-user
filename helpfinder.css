@@ -1,0 +1,366 @@
+.page1__options {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+}
+
+.page2__options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+}
+
+.emoji__wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  bottom: 0;
+}
+
+.booknow__go-back-link {
+  color: #41496b !important;
+  font-size: 0.9rem !important;
+  font-weight: 800 !important;
+}
+.page1__options div,
+.page2__options div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  flex-direction: column;
+}
+
+.emoji__title {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.emoji__subtitle {
+  text-align: center;
+}
+
+.emoji__card-text {
+  display: inline-block;
+  font-size: 0.7rem;
+  position: relative;
+  font-weight: 600;
+  bottom: 1rem;
+  color: #41496b;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.booknow__page-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.booknow__page-2 div {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #1a535c;
+  border-radius: 5px;
+}
+
+.booknow__page-2 div:hover {
+  background-color: #fff;
+  color: #1a535c !important;
+}
+
+.booknow__page-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.booknow__page-3 input {
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #41496b;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.zipcode__link {
+  margin-bottom: 2rem !important;
+  font-weight: 800 !important;
+  color: #41496b !important;
+}
+
+.booknow__page-3 input:focus {
+  outline: none;
+}
+
+.page4-button {
+  padding-bottom: 4rem !important;
+  text-align: right;
+}
+
+.professional__cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.professional__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.professional__card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.professional__card p {
+  align-self: flex-start;
+  padding-left: 1rem;
+}
+
+.professional__card a {
+  align-self: flex-end;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  color: #00ae4e !important;
+  font-weight: bold !important;
+}
+
+.professional__card-name {
+  font-weight: bold;
+  color: #41496b;
+}
+
+.professional__card-title {
+  font-size: 0.8rem;
+  color: #1a535c;
+  font-weight: bold;
+}
+
+.professional__card-location {
+  font-size: 0.8rem;
+  color: #41496b;
+}
+
+.helpfinder__footer-text {
+  font-size: 0.9rem;
+  color: #8390a2;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.date__container {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.date__text {
+  font-size: 0.9rem;
+  color: #41496b;
+  font-weight: 400;
+}
+
+.date__text-highlight {
+  font-size: 0.9rem;
+  color: #41496b;
+  font-weight: 800;
+  display: inline-block;
+}
+.date__time-zone {
+  display: flex;
+  flex-direction: column;
+}
+
+.date__timezone-label {
+  margin-bottom: 1rem;
+}
+
+.matches__button a {
+  color: #fff !important;
+  background: #00ae4e !important;
+  border-radius: 5px;
+  padding: 0.2rem;
+  font-size: 0.6rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.form__progression {
+  display: inline-block !important;
+  font-size: 0.9rem !important;
+  color: #41496b !important;
+  font-weight: bold;
+}
+
+.pro__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.appointment__success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.appointment__success-container img {
+  margin-bottom: 2rem;
+}
+
+.appointment__success-text {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #41496b;
+}
+
+.appointment__success-highlight a {
+  color: #00ae4e;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.radio__buttons2 {
+  padding-left: 1rem;
+  padding-bottom: 3rem;
+  justify-content: center;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+
+label {
+  border: none;
+  padding: 0.5rem;
+  color: #41496b;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 986px) {
+  .radio__buttons2 {
+    margin-top: 2rem;
+  }
+  .date__text-highlight {
+    font-size: 0.7rem;
+    color: #41496b;
+    font-weight: 800;
+    display: inline-block;
+  }
+  .date__container {
+    flex-direction: column;
+  }
+  .helpfinder__footer-text {
+    font-size: 0.7rem;
+  }
+
+  .page1__options {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 5rem;
+  }
+
+  .page2__options {
+    margin-bottom: 5rem;
+  }
+
+  .emoji__title {
+    margin-top: 2rem;
+    font-size: 1.2rem !important;
+  }
+
+  .emoji__card-text {
+    display: inline-block;
+    font-size: 0.7rem;
+    position: relative;
+    font-weight: 600;
+    bottom: 1rem;
+    color: #41496b;
+    font-size: 0.6rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .helpfinder__footer-text {
+    font-size: 0.6rem;
+  }
+  .page1__options {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .page2__options {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .emoji__title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1rem !important;
+  }
+
+  .booknow__options {
+    grid-template-columns: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .booknow__page-2 {
+    grid-template-columns: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .booknow__page-3 input {
+    margin-bottom: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #41496b;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .page4-button {
+    padding-bottom: 2rem !important;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .professional__cards-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+}

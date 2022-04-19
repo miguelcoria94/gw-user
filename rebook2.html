@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./modals.css" />
+    <link rel="stylesheet" href="./helpfinder.css" />
+    <link rel="stylesheet" href="./calender.css" />
+    <link rel="stylesheet" href="./notifications.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <title>Dashboard - Help Finder</title>
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" />
+
+    <!-- sidebar -->
+
+    <div class="sidebar">
+      <!-- sidebar logo -->
+
+      <div class="sidebar__logo">
+        <a href="./">
+          <img src="./images/gw-large.png" alt="" class="sidebar-logo-logo" />
+        </a>
+        <a href="./">
+          <img src="./images/gw-small.png" alt="" class="sidebar-small-logo" />
+        </a>
+      </div>
+
+      <!-- sidebar__menu -->
+
+      <div class="sidebar__menu">
+        <ul>
+          <li>
+            <a href="./index.html">
+              <span class="las la-home"></span><span> Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="./appointments.html" class="sidebar__menu-active">
+              <span class="las la-calendar-day"></span
+              ><span> Appointments</span>
+            </a>
+          </li>
+          <li>
+            <a href="./podcasts.html">
+              <span class="las la-podcast"></span><span> Podcasts</span>
+            </a>
+          </li>
+          <li>
+            <a href="./articles.html">
+              <span class="las la-newspaper"></span><span> Articles</span>
+            </a>
+          </li>
+          <li>
+            <a href="./videos.html">
+              <span class="lab la-youtube"></span><span> Videos</span>
+            </a>
+          </li>
+          <li>
+            <a href="./settings.html">
+              <span class="las la-cog"></span><span> Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" id="logoutModalTrigger">
+              <span class="las la-sign-out-alt"></span><span> Logout</span>
+            </a>
+          </li>
+          <!-- The Modal -->
+          <div id="logoutModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close las la-times"></span>
+              <br />
+              <h1 class="card-title modal__title">
+                Are you sure you want to logout?
+              </h1>
+              <div class="modal__button-container">
+                <button>Cancel</button>
+                <button>Logout</button>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <!-- main content -->
+
+    <div class="main__content">
+      <header>
+        <div class="header__left-side">
+          <label for="nav-toggle">
+            <span class="las la-bars"></span>
+          </label>
+        </div>
+
+        <div class="header__right-side">
+          <a href="./crisislink1.html" class="header__crisis-button"
+            >Get Help Now</a
+          >
+          <div class="header__notifications">
+            <ul class="notification-drop">
+              <li class="item">
+                <i
+                  class="fa fa-bell-o notification-bell"
+                  aria-hidden="true"
+                ></i>
+                <span class="btn__badge pulse-button">3</span>
+                <ul>
+                  <li>First Item</li>
+                  <li>Second Item</li>
+                  <li>Third Item</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <img
+            src="./images/jeff.jpeg"
+            alt="ben-profile-picture"
+            width="40"
+            height="40"
+          />
+          <div>
+            <h4>Jeff Bezos</h4>
+            <small>user account</small>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div>
+          <a
+            href="./rebook1.html"
+            class="link-text booknow__go-back-link"
+            style="color: 41496b !important"
+          >
+            Go back</a
+          >
+        </div>
+        <div class="emoji__wrapper">
+          <div class="welcome__container">
+            <h1 class="title-text emoji__title">
+              What day and time are you availabile?
+            </h1>
+          </div>
+          <div class="date__container">
+            <div class="container-calendar">
+              <h3 id="monthAndYear" class="calendar__title"></h3>
+
+              <div class="button-container-calendar">
+                <button id="previous" onclick="previous()">&#8249;</button>
+                <button id="next" onclick="next()">&#8250;</button>
+              </div>
+
+              <table class="table-calendar" id="calendar" data-lang="en">
+                <thead id="thead-month"></thead>
+                <tbody id="calendar-body"></tbody>
+              </table>
+
+              <div class="footer-container-calendar">
+                <div class="select__container">
+                  <select id="month" onchange="jump()">
+                    <option value="0">Jan</option>
+                    <option value="1">Feb</option>
+                    <option value="2">Mar</option>
+                    <option value="3">Apr</option>
+                    <option value="4">May</option>
+                    <option value="5">Jun</option>
+                    <option value="6">Jul</option>
+                    <option value="7">Aug</option>
+                    <option value="8">Sep</option>
+                    <option value="9">Oct</option>
+                    <option value="10">Nov</option>
+                    <option value="11">Dec</option>
+                  </select>
+                  <select id="year" onchange="jump()"></select>
+                </div>
+              </div>
+            </div>
+            <div class="date__right-side">
+              <div class="date__time-zone">
+                <span class="date__text-highlight date__timezone-label"
+                  >Please Select a Timezone:</span
+                >
+                <select name="timezone">
+                  <option value="Etc/GMT+12">
+                    (GMT-12:00) International Date Line West
+                  </option>
+                  <option value="Pacific/Midway">
+                    (GMT-11:00) Midway Island, Samoa
+                  </option>
+                  <option value="Pacific/Honolulu">(GMT-10:00) Hawaii</option>
+                  <option value="US/Alaska">(GMT-09:00) Alaska</option>
+                  <option value="America/Los_Angeles">
+                    (GMT-08:00) Pacific Time (US & Canada)
+                  </option>
+                  <option value="America/Tijuana">
+                    (GMT-08:00) Tijuana, Baja California
+                  </option>
+                  <option value="US/Arizona">(GMT-07:00) Arizona</option>
+                  <option value="America/Chihuahua">
+                    (GMT-07:00) Chihuahua, La Paz, Mazatlan
+                  </option>
+                  <option value="US/Mountain">
+                    (GMT-07:00) Mountain Time (US & Canada)
+                  </option>
+                  <option value="America/Managua">
+                    (GMT-06:00) Central America
+                  </option>
+                  <option value="US/Central">
+                    (GMT-06:00) Central Time (US & Canada)
+                  </option>
+                  <option value="America/Mexico_City">
+                    (GMT-06:00) Guadalajara, Mexico City, Monterrey
+                  </option>
+                  <option value="Canada/Saskatchewan">
+                    (GMT-06:00) Saskatchewan
+                  </option>
+                  <option value="America/Bogota">
+                    (GMT-05:00) Bogota, Lima, Quito, Rio Branco
+                  </option>
+                  <option value="US/Eastern">
+                    (GMT-05:00) Eastern Time (US & Canada)
+                  </option>
+                  <option value="US/East-Indiana">
+                    (GMT-05:00) Indiana (East)
+                  </option>
+                  <option value="Canada/Atlantic">
+                    (GMT-04:00) Atlantic Time (Canada)
+                  </option>
+                  <option value="America/Caracas">
+                    (GMT-04:00) Caracas, La Paz
+                  </option>
+                  <option value="America/Manaus">(GMT-04:00) Manaus</option>
+                  <option value="America/Santiago">(GMT-04:00) Santiago</option>
+                  <option value="Canada/Newfoundland">
+                    (GMT-03:30) Newfoundland
+                  </option>
+                  <option value="America/Sao_Paulo">
+                    (GMT-03:00) Brasilia
+                  </option>
+                  <option value="America/Argentina/Buenos_Aires">
+                    (GMT-03:00) Buenos Aires, Georgetown
+                  </option>
+                  <option value="America/Godthab">(GMT-03:00) Greenland</option>
+                  <option value="America/Montevideo">
+                    (GMT-03:00) Montevideo
+                  </option>
+                  <option value="America/Noronha">
+                    (GMT-02:00) Mid-Atlantic
+                  </option>
+                  <option value="Atlantic/Cape_Verde">
+                    (GMT-01:00) Cape Verde Is.
+                  </option>
+                  <option value="Atlantic/Azores">(GMT-01:00) Azores</option>
+                  <option value="Africa/Casablanca">
+                    (GMT+00:00) Casablanca, Monrovia, Reykjavik
+                  </option>
+                  <option value="Etc/Greenwich">
+                    (GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon,
+                    London
+                  </option>
+                  <option value="Europe/Amsterdam">
+                    (GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna
+                  </option>
+                  <option value="Europe/Belgrade">
+                    (GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana,
+                    Prague
+                  </option>
+                  <option value="Europe/Brussels">
+                    (GMT+01:00) Brussels, Copenhagen, Madrid, Paris
+                  </option>
+                  <option value="Europe/Sarajevo">
+                    (GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb
+                  </option>
+                  <option value="Africa/Lagos">
+                    (GMT+01:00) West Central Africa
+                  </option>
+                  <option value="Asia/Amman">(GMT+02:00) Amman</option>
+                  <option value="Europe/Athens">
+                    (GMT+02:00) Athens, Bucharest, Istanbul
+                  </option>
+                  <option value="Asia/Beirut">(GMT+02:00) Beirut</option>
+                  <option value="Africa/Cairo">(GMT+02:00) Cairo</option>
+                  <option value="Africa/Harare">
+                    (GMT+02:00) Harare, Pretoria
+                  </option>
+                  <option value="Europe/Helsinki">
+                    (GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius
+                  </option>
+                  <option value="Asia/Jerusalem">(GMT+02:00) Jerusalem</option>
+                  <option value="Europe/Minsk">(GMT+02:00) Minsk</option>
+                  <option value="Africa/Windhoek">(GMT+02:00) Windhoek</option>
+                  <option value="Asia/Kuwait">
+                    (GMT+03:00) Kuwait, Riyadh, Baghdad
+                  </option>
+                  <option value="Europe/Moscow">
+                    (GMT+03:00) Moscow, St. Petersburg, Volgograd
+                  </option>
+                  <option value="Africa/Nairobi">(GMT+03:00) Nairobi</option>
+                  <option value="Asia/Tbilisi">(GMT+03:00) Tbilisi</option>
+                  <option value="Asia/Tehran">(GMT+03:30) Tehran</option>
+                  <option value="Asia/Muscat">
+                    (GMT+04:00) Abu Dhabi, Muscat
+                  </option>
+                  <option value="Asia/Baku">(GMT+04:00) Baku</option>
+                  <option value="Asia/Yerevan">(GMT+04:00) Yerevan</option>
+                  <option value="Asia/Kabul">(GMT+04:30) Kabul</option>
+                  <option value="Asia/Yekaterinburg">
+                    (GMT+05:00) Yekaterinburg
+                  </option>
+                  <option value="Asia/Karachi">
+                    (GMT+05:00) Islamabad, Karachi, Tashkent
+                  </option>
+                  <option value="Asia/Calcutta">
+                    (GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi
+                  </option>
+                  <option value="Asia/Calcutta">
+                    (GMT+05:30) Sri Jayawardenapura
+                  </option>
+                  <option value="Asia/Katmandu">(GMT+05:45) Kathmandu</option>
+                  <option value="Asia/Almaty">
+                    (GMT+06:00) Almaty, Novosibirsk
+                  </option>
+                  <option value="Asia/Dhaka">(GMT+06:00) Astana, Dhaka</option>
+                  <option value="Asia/Rangoon">
+                    (GMT+06:30) Yangon (Rangoon)
+                  </option>
+                  <option value="Asia/Bangkok">
+                    (GMT+07:00) Bangkok, Hanoi, Jakarta
+                  </option>
+                  <option value="Asia/Krasnoyarsk">
+                    (GMT+07:00) Krasnoyarsk
+                  </option>
+                  <option value="Asia/Hong_Kong">
+                    (GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi
+                  </option>
+                  <option value="Asia/Kuala_Lumpur">
+                    (GMT+08:00) Kuala Lumpur, Singapore
+                  </option>
+                  <option value="Asia/Irkutsk">
+                    (GMT+08:00) Irkutsk, Ulaan Bataar
+                  </option>
+                  <option value="Australia/Perth">(GMT+08:00) Perth</option>
+                  <option value="Asia/Taipei">(GMT+08:00) Taipei</option>
+                  <option value="Asia/Tokyo">
+                    (GMT+09:00) Osaka, Sapporo, Tokyo
+                  </option>
+                  <option value="Asia/Seoul">(GMT+09:00) Seoul</option>
+                  <option value="Asia/Yakutsk">(GMT+09:00) Yakutsk</option>
+                  <option value="Australia/Adelaide">
+                    (GMT+09:30) Adelaide
+                  </option>
+                  <option value="Australia/Darwin">(GMT+09:30) Darwin</option>
+                  <option value="Australia/Brisbane">
+                    (GMT+10:00) Brisbane
+                  </option>
+                  <option value="Australia/Canberra">
+                    (GMT+10:00) Canberra, Melbourne, Sydney
+                  </option>
+                  <option value="Australia/Hobart">(GMT+10:00) Hobart</option>
+                  <option value="Pacific/Guam">
+                    (GMT+10:00) Guam, Port Moresby
+                  </option>
+                  <option value="Asia/Vladivostok">
+                    (GMT+10:00) Vladivostok
+                  </option>
+                  <option value="Asia/Magadan">
+                    (GMT+11:00) Magadan, Solomon Is., New Caledonia
+                  </option>
+                  <option value="Pacific/Auckland">
+                    (GMT+12:00) Auckland, Wellington
+                  </option>
+                  <option value="Pacific/Fiji">
+                    (GMT+12:00) Fiji, Kamchatka, Marshall Is.
+                  </option>
+                  <option value="Pacific/Tongatapu">
+                    (GMT+13:00) Nuku'alofa
+                  </option>
+                </select>
+              </div>
+              <div class="date__time-zone time__time-label">
+                <span class="date__text-highlight date__timezone-label"
+                  >Please Select a Time:</span
+                >
+                <div>
+                  <select name="from" id="from">
+                    <option value="1">1:00</option>
+                    <option value="2">2:00</option>
+                    <option value="3">3:00</option>
+                    <option value="4">4:00</option>
+                    <option value="5">5:00</option>
+                  </select>
+
+                  <select name="to" id="to">
+                    <option value="1">1:00</option>
+                    <option value="2">2:00</option>
+                    <option value="3">3:00</option>
+                    <option value="4">4:00</option>
+                    <option value="5">5:00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="date__text">
+                <span class="date__text-highlight">You Selected:</span> July 28,
+                2021, <span>3:00pm - 4:00pm</span>
+              </div>
+              <div>
+                <span class="">
+                  <a
+                    href="./rebook3.html"
+                    class="date__text-highlight date__link"
+                    >Confirm Now
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="welcome__container">
+            <p class="helpfinder__footer-text">
+              Please note that appointments are subject to availability. If you
+              have a crisis and are not able to schedule immediate help, please
+              refer to our
+              <span style="color: #00ae4e; cursor: pointer"
+                >Crisis Support Page.</span
+              >
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./modals.js"></script>
+    <script src="./calender.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".notification-drop .item").on("click", function () {
+          $(this).find("ul").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>
